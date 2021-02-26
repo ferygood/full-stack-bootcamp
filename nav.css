@@ -1,0 +1,43 @@
+body{
+    font-size: 20px;
+    margin: 0px;
+}
+
+nav{
+    display: flex;
+}
+
+nav>.title{
+    flex:auto;
+    padding: 5px;
+}
+
+nav>.menu{
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav>.menu>.item{
+    margin-left: 15px;
+}
+
+nav>.mobile-menu{
+    display: none;
+}
+
+.home{
+    font-size: 2em;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    background-color: rgb(162, 208, 228);
+}
+
+@media (max-width: 600px){
+    nav>.menu>.item{
+        display: none;
+    }
+    nav>.mobile-menu{
+        display: flex;
+    }
+}

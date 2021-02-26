@@ -1,0 +1,46 @@
+section.gallery{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}    
+
+section.gallery>.photo{
+    width: 280px;
+    height: 210px;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+}
+
+section.gallery>.photo>.caption{
+    background-color: rgb(162, 208, 228);
+    padding: 5px;
+}
+
+img{
+    vertical-align: text-bottom;
+}
+
+@media (max-width: 1200px){
+    section.gallery{
+        width: 90%;
+    }
+    section.gallery>.photo{
+        width: 45%;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px){
+    section.gallery{
+        width: 90%;
+    }
+    section.gallery>.photo{
+        width: 90%;
+        height: auto;
+    }
+}
