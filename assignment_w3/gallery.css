@@ -22,7 +22,7 @@ section.gallery>.photo{
 section.gallery>.photo>.caption{
     background-color: rgb(162, 208, 228);
     padding: 5px;
-    font-size: 1em;
+    line-height: 80%;
 }
 
 img{

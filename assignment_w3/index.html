@@ -26,8 +26,11 @@
             el.appendChild(img);
             //新增 div 標籤放入圖說
             let text=document.createElement("div");
-            text.className="caption"
+            text.className="caption";
             text.textContent=figurl[i]["stitle"];
+            if (text.textContent.length < 13){
+                text.textContent=figurl[i]["stitle"]+"\n\n123"
+            }
             el.appendChild(text);
         };
     };

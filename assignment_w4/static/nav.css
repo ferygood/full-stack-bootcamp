@@ -1,0 +1,27 @@
+body{
+    font-size: 30px;
+}
+
+nav>.title{
+    text-align: center;
+    color: white;
+    background-color: rgb(9, 45, 67);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+
+nav>.topic{
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 60px;
+}
+
+nav>.content{
+    text-align: center;
+}
+
+nav>.button{
+    text-align: center;
+}
+
