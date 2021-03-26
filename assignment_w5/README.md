@@ -1,4 +1,4 @@
-要求三：基本的 SQL 指令
+*** 要求三：基本的 SQL 指令
 
 1 使用 Insert 新增四筆資料，其中一筆必須要 username 和 passoword 都是 ply 
 
@@ -37,3 +37,13 @@
 9 使用 Delete 指令刪除所有在 user 資料表中的資料
 
 ![10](https://github.com/ferygood/full-stack-bootcamp/blob/main/assignment_w5/screenshots/10.png)
+
+
+
+*** 要求四 結合資料表 SQL JOIN 的操作 
+
+10 使用 select 和 join 取得所有留言以及資料中須包含留言會員的姓名。
+![11](https://github.com/ferygood/full-stack-bootcamp/blob/main/assignment_w5/screenshots/11.png)
+
+11 使用 select 和 join 取得 user 資料表中欄位 username 是 ply 的所有留言，資料中須包含留言會員的姓名。
+![12](https://github.com/ferygood/full-stack-bootcamp/blob/main/assignment_w5/screenshots/12.png)
