@@ -29,7 +29,7 @@ app.secret_key = str(os.urandom(14)) #secret key for session
 def index():
     return render_template("index.html")
 
-@app.route("/signup", methods=["POST"])
+@app.route("/signup", methods=["POST"]) #建立註冊帳號程序
 def signup():
     name = request.form["name"]
     account = request.form["account"]
@@ -51,9 +51,7 @@ def signup():
         print("signup fail")
         return redirect(url_for(".errorPage", message="帳號已被註冊"))
 
-
-
-@app.route("/signin", methods=["POST"]) #驗證使用者帳號密碼是否正確
+@app.route("/signin", methods=["POST"]) #建立登入帳號程序
 def verify():
     account = request.form["account"]
     password = request.form["password"]
@@ -72,19 +70,19 @@ def verify():
     else:
         return redirect("/error")
 
-@app.route("/signout", methods=["GET"]) #使用者登出導回首頁
+@app.route("/signout", methods=["GET"]) #建立登出帳號程序。使用者登出導回首頁
 def logout():
     session.pop("username", None) # 把使用者紀錄去除
     print("User (logout) ") # 列印使用者登出
     return redirect("/")
 
-@app.route("/member") #登入後的會員頁
+@app.route("/member") #登入後的會員頁網址
 def memberPage():
     if "username" in session:
         return render_template("member.html", data=session["name"]) #樣本頁面加入使用者名稱
     return redirect("/") #如果 username 沒有在 session 裡面直接導回首頁
 
-@app.route("/error/") #帳號密碼失敗的頁面
+@app.route("/error/") #登入失敗頁網址
 def errorPage():
     message=request.args.get("message", "帳號或密碼輸入錯誤")
     return render_template("error.html", data=message)
